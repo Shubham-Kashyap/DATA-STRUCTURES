@@ -20,3 +20,28 @@ def returnDollWithinDoll(dolls):
         print("All dolls are opened !");
     else:
         returnDollWithinDoll(dolls - 1);
+
+
+now this is the example showing a dummy program to get russian dolls (dolls hiding within a doll)
+
+lets do another example :
+you might have heard of a program to get the factorial of a number using recursion :
+so, the program must be,
+
+
+
+# program to print factorial of a number
+def getFactorial(n):
+    assert n < 0, "The number must be positive integer only";
+    if(n == 1 or n == 0):
+        retutn 1;
+    else:
+        return n * getFactorial(n-1):
+
+
+# program to print fibonacci series
+def getFibonacci(n):
+    assert n<0, "The number must be a number";
+    if(n in [0,1]):
+        return 1;
+    return getFibonacci(n-1) * getFibonacci(n-2)

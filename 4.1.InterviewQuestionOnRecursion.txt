@@ -1,0 +1,18 @@
+Question 1 : how to find a sum of digits of positive integer using recursion ?
+hint :
+10 ---- 10 / 10 = 1 and remainder will be 0
+54 ---- 54 / 10 = 5 and  remainder will be 4
+114 --- 114 / 10 = 11 and remainder will be 4
+
+
+# program to get sum of digits of a positive numbers 
+
+def getSumOfDigits(number):
+    if(number == 0):
+        return 0;
+    else:
+        int(number%10) + getSumOfDigits(int(number/10));
+
+
+
+Question 2 : how to calculate power of number using recursion ?
