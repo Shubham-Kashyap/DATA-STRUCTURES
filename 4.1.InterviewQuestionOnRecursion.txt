@@ -16,3 +16,82 @@ def getSumOfDigits(number):
 
 
 Question 2 : how to calculate power of number using recursion ?
+hint :
+    x^n = x^n * x^(n-1)
+    2^4 = 2*2*2*2
+
+
+    2^4 == 2 * 2 (n-1);
+    ******  things to remember *****
+    # every element with power 0 always return 1
+
+
+
+# program to get power of number through recursion
+
+def getPowerValue(base , exponent):
+
+    # before further proceeding please check two things 
+    # 1. the exponent must be postitive it cannot be a negative number
+    # 2. the exponent must be grater than 1
+    if(exponent == 0):
+        print("The any number with power 0 will always return 1 ");
+        return 1;
+    elif(exponent == 1):
+        print("The any number with power 1 will always return number itself")
+        return base;
+    else:
+        return  ( base * getPowerValue(base , exponent - 1))
+    
+
+
+
+Question 3 : how to get  the GCD (greatest common divisor) pf two numbers using recursion
+
+GCD - (GREATEST COMMON DIVISOR)  : greatest common divisor is largest positive integer that divides the number without a remainder
+
+Hint :
+this can be achived by (Euclidean algorithm) search about it a little it it sounds new !
+
+GCD(48,18)
+
+step 1 : 48/18 == 2 (you will get the remainder 12)
+step 2 : 18/12 == 1 (you will get the remainder 6)
+step 3 : 12/6 == 2 (you will get the remainder 0)
+
+
+# Program to get the GCD 
+def greatestCommonDivisor(a , b):
+    return greatestCommonDivisor( a )
+
+
+
+Question 4 : how to convert a number from decimal to binary
+
+Step 1 : Divide the number by 2
+step 2 : Get the integer quotient for the next iteration
+step 3 : Get the remainder of a binary digit
+step 4 : repeat the steps untill the quotient is equal to   
+
+let's say we have to convert number 13 to binary 
+
+13 / 2 ===> ( Quotient = 6 ) & ( Remainder = 1 )
+6 / 2 ===> ( Quotient = 3 ) & ( Remainder = 0 )
+3 / 2 ===> ( Quotient = 1 ) & ( Remainder = 1 )
+1 / 2 ===> ( Quotient = 0 ) & ( Remainder = 1 )
+
+each and every time divide the quotient by 2 untill we get the quotient 0
+binary of 13 ====  1101
+
+gather all the remainders from reverse order i.e 1101
+
+
+another example --
+lets convert the number 10 to its binary
+
+10 / 2 ===> ( Quotient = 5 ) & ( Remainder = 0 )
+5 / 2 ===> ( Quotient = 2 ) & ( Remainder = 1 )
+2 / 2 ===> ( Quotient = 1 ) & ( Remainder = 0 )
+1 / 2 ===> ( Quotient = 0 ) & ( Remainder = 1 )
+
+binary of 10 ==== 1010
